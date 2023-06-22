@@ -44,16 +44,24 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
 
 app.UseCors(MyAllowSpecificOrigins);
 
+
+app.Use(async (context, next) =>
+{
+    await next();
+
+    if(context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value))
+    {
+        context.Request.Path = "/index.html";
+        await next();
+    }
+});
+
 app.UseStaticFiles();
+app.UseDefaultFiles();
 
 app.UseHttpsRedirection();
 
