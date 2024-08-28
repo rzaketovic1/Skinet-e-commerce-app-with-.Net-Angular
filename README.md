@@ -1,4 +1,6 @@
-I built this application using an Udemy course to improve my knowledge in .NET Core and Angular. The course covers a range of topics, including:
+## Course Reference
+
+This application was built using a Udemy course to improve my knowledge in .NET Core and Angular. The course covers a range of topics, including:
 
 - .NET Core
 - Angular
@@ -14,4 +16,4 @@ I built this application using an Udemy course to improve my knowledge in .NET C
 - Reusable Form Components in Angular
 - Angular Validation and Async Validation
 
-Here’s the link to the course: Udemy - Learn to Build an E-Commerce App with .NET Core and Angular.
+You can find the course here: [Udemy - Learn to Build an E-Commerce App with .NET Core and Angular](https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular).
